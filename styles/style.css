@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'OpenSans';
+	src:url(../fonts/OpenSansCondensed-Light.ttf);
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src:url(../fonts/Roboto-Regular.ttf);
+}
+
+
+body {
+  	margin: 5vh 5vw;
+  	font-family: Roboto;
+ 	background: #9b9fb2; /* Old browsers */
+}
+
+#map {
+  	height: 90vh;
+  	width: 90vw;
+}
