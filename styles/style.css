@@ -8,14 +8,337 @@
 	src:url(../fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+	font-family: 'Product';
+	src:url(../fonts/ProductSansRegular.ttf);
+}
+
 
 body {
   	margin: 5vh 5vw;
-  	font-family: Roboto;
- 	background: #9b9fb2; /* Old browsers */
+  	font-family: Product;
+ 	background-color: #010955;
+ 	color: white;
+}
+
+#title{
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 #map {
-  	height: 90vh;
-  	width: 90vw;
+  	height: 50vh;
+  	width: 85%;
+  	margin-right: auto;
+  	margin-left: auto;
+}
+
+#weather{
+	width: 4em;
+}
+
+#fieldset{
+	padding-bottom: 20px;
+	width: 100%;
+	border: none;
+	margin-left: 20px;
+}
+
+#city{
+	width: 60%;
+}
+
+
+input[type="text"] {
+	background-color: lightgrey;
+	border: none;
+	border-radius: 10px;
+	height: 20px;
+}
+
+input[type="button"] {
+	border-radius: 10px;
+	color: white;
+	background-color: #0369EF;
+	border: none;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 10px;
+	margin-left: 10px;
+}
+
+::placeholder{
+	padding-left: 7px;
+	font-size: 10px;
+}
+
+#weather{
+	padding-left: 20px;
+	width: 100%;
+}
+
+#weather img{
+	width: 20%;
+}
+
+h2{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 20px;
+  color: #fff;
+}
+.mapboxgl-popup-content {
+  padding: 20px 25px 15px 20px;
+  color: #fff;
+  background-color: #282D5E;
+  border-radius: 10px;
+  font-family: Roboto;
+  line-height: 1.3;
+}
+
+.mapboxgl-popup-content h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.mapboxgl-popup-content p {
+  margin-top: 2px;
+}
+
+img{
+	width: 100%;
+}
+
+
+.item1, .item2, .item3, .item4{
+	background-color: #282D5E;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.item2{
+	height: 60vh;
+}
+
+div.item3{
+	margin-top: 20px;
+}
+
+button{
+	margin-top: 20px;
+	border-radius: 10px;
+	color: white;
+	background-color: #0369EF;
+	border: none;
+	padding: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+#buttons{
+	margin-right: auto;
+	margin-left: auto;
+	width: 95%;
+}
+
+#weather1{
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+table.table{
+	width: 90%;
+	margin-left: 15px;
+	padding-bottom: 20px;
+}
+
+th{
+	color: #0369EF;
+}
+
+#deaths{
+	color: red;
+}
+
+#recover{
+	color: green;
+}
+
+td{
+	text-align: center;
+}
+
+
+@media only screen and (min-width: 768px){
+
+
+	#fieldset{
+		padding-bottom: 20px;
+		width: 80%;
+		border: none;
+		margin-left: 8em;
+	}
+
+	h2{
+		padding-top: 1em;
+		padding-bottom: 0.5em;
+	}
+
+	#weather{
+	padding-left: 7em;
+	width: 100%;
+	}
+
+	#weather img{
+		width: 10%;
+	}
+
+	#map{
+		width: 90%;
+		height: 48vh;
+	}
+
+	.container1{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.item3{
+		width: 48%;
+	}
+
+	.item4{
+		width: 50%;
+		height: 11em;
+		margin-top: 20px;
+	}
+
+	table.table{
+		padding-bottom: 0;
+	}
+
+	#covid{
+		margin: 0;
+		margin-top: 20px;
+	}
+
+}
+
+@media only screen and (min-width: 1024px){
+
+
+	#fieldset{
+		padding-bottom: 20px;
+		width: 80%;
+		border: none;
+		margin-left: 13em;
+	}
+
+	#weather{
+		padding-left: 15em;
+		width: 100%;
+	}
+
+	.item2{
+		height: 44vh;
+	}
+
+	#map{
+		height: 35vh;
+	}
+
+
+	#weather img{
+		width: 7%;
+	}
+
+}
+
+@media only screen and (min-width: 1280px){
+
+	.container{
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+	}
+
+	#title{
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	h2{
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 10px;
+		padding-bottom: 1em;
+	}
+
+	#covid{
+		padding-top: 10px;
+		margin-top: 0px;
+		padding-bottom: 2em;
+	}
+
+	.item1{
+		height: 37vh;
+		margin-top: 1.2em;
+		width: 23em;
+	}
+
+
+	.item3{
+		width: 23em;
+		height: 37vh;
+		margin-left: auto;
+		margin-right: 1em;
+	}
+
+	.item4{
+		width: 23em;
+		height: 37vh;
+	}
+
+
+	#fieldset{
+		margin-left: 1.5em;
+
+	}
+
+	#weather{
+		padding-left: 3em;
+		width: 100%;
+	}
+
+	#weather1{
+		padding-top: 2em;
+	}
+
+	.item2{
+		order: 4;
+		margin-top: 1em;
+		width: 100%;
+		height: 80vh;
+	}
+
+	#map{
+		height: 80%;
+		width: 92%;
+	}
+
+	#weather img{
+		width: 15%;
+	}
+
+
 }

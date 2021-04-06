@@ -7,18 +7,61 @@
 		<link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
 		<script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>		
 		<script src="scripts/main.js" defer></script>
+
 	</head>
 	<body>
-		<h1>Current weather</h1>
-		<form>
-			<fieldset>
-				<label for="city">City:</label>
-				<input type="text" name="city" id="city" />
-				<input type="button" id="getWeather" value="get current weather" />
-			</fieldset>
-		</form>
-		<article id="weather"></article>
-		    <div id="map"></div>
+
+		<div class="container">
+			<div class="item1">
+				<h2 id="title">Current weather</h2>
+				<form>
+					<fieldset id="fieldset">
+						<label for="city"></label>
+							<input type="text" name="city" id="city" placeholder="City" />
+							<input type="button" id="getWeather" value="Search" />
+					</fieldset>
+				</form>
+				<article id="weather"></article>
+			</div>
+	
+
+			<div class="item2">
+				<h2>Landingsplaatsen</h2>
+				<div id="map"></div>
+			</div>
+
+			<div class="container1">
+			<div class="item3">
+				<div id="buttons">
+					<button type="button" id="Schiphol">Schiphol</button>
+					<button type="button" id="Lelystad">Lelystad</button>
+					<button type="button" id="Rotterdam">Rotterdam</button>
+					<button type="button" id="Enschede">Enschede</button>
+				</div>
+				<article id="weather1">Push a button to show the current <br> weather of the landing spot.</article>
+			</div>
+
+			<div class="item4">
+			   		<h2 id="covid">Covid 19 live data</h2>
+
+				<table class="table">
+					    <thead>
+					      <tr>
+					        <th id="cases">Total cases</th>
+					        <th id="deaths">Total deaths</th>
+					        <th id="recover">Total recovered</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr id="data">
+					       
+					      </tr>
+					    </tbody>
+				</table>
+			</div>
+			</div>
+		</div>
 	</body>
 </html>
